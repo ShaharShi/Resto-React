@@ -7,7 +7,7 @@ import {IRoute} from '../appRouter'
 
 export const routesConfiguration: Array<IRoute> = [
     { order: 0, component: HomePage, path: "/", name: "Home", exact: true, isVisible: true },
-    { order: 1, component: AboutPage, path: "/about", name: "About", isVisible: true },
-    { order: 2, component: OrdersPage, path: "/orders", name: "Orders", isVisible: true },
-    { order: 3, component: ReportsPage, path: "/reports", name: "Reports", isVisible: true },
+    { order: 3, component: AboutPage, path: "/about", name: "About", isVisible: true },
+    { order: 1, component: OrdersPage, path: "/orders", name: "Orders", isVisible: true },
+    { order: 2, component: ReportsPage, path: "/reports", name: "Reports", isVisible: true },
 ]
