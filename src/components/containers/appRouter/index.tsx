@@ -1,11 +1,7 @@
 import React from 'react';
-import HomePage from '../pages/home';
-import AboutPage from '../pages/about';
-import OrdersPage from '../pages/orders';
-import ReportsPage from '../pages/reports';
-import { Switch, Route } from 'react-router-dom';
+import { routesConfiguration } from './config'
+import { Switch } from 'react-router-dom';
 import RoutesApp from './routesApp';
-
 
 export interface IRoute {
     component: any,
@@ -15,13 +11,9 @@ export interface IRoute {
     isVisible: boolean,
     order: number,
 }
-
-const routesConfiguration: Array<IRoute> = [
-    { order: 0, component: HomePage, path: "/", name: "Home", exact: true, isVisible: true },
-    { order: 1, component: AboutPage, path: "/about", name: "About", isVisible: true },
-    { order: 2, component: OrdersPage, path: "/orders", name: "Orders", isVisible: true },
-    { order: 3, component: ReportsPage, path: "/reports", name: "Reports", isVisible: true },
-]
+export interface IProps {
+    routes: Array<IRoute>
+}
 
 export default function AppRouter() {
     return (
