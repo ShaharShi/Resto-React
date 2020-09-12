@@ -2,24 +2,25 @@ import React, { useContext, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { MealsContext } from 'App';
+import Rank from '../rank';
 
-interface IMeal {
+export interface IMeal {
     name: string;
     description: string;
     image: string;
     action: Function;
     actionTitle: string;
     cls: string
+    rating: number
 }
 
 
 export default function Meal(props: IMeal) {
-    const [state, setState] = useContext(MealsContext)
+    const [globalState, setGlobalState] = useContext(MealsContext)
     
     function addMeal() {
-        setState({ ...state, orders: [...state.orders, props] })
+        setGlobalState({ ...globalState, orders: [...globalState.orders, props] })
     }
-    
     return (
         <Card className="col-lg-4 mb-5">
             <Card.Img variant="top" src={props.image} />
@@ -28,6 +29,7 @@ export default function Meal(props: IMeal) {
                 <Card.Text>
                     {props.description}
                 </Card.Text>
+                <Rank stars={props.rating}/>
                 <Button variant={props.cls || "primary"} onClick={addMeal}>{props.actionTitle}</Button>
             </Card.Body>
         </Card>

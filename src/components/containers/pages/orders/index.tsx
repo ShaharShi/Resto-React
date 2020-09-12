@@ -4,11 +4,11 @@ import Meal from 'components/containers/ui-components/meal';
 import Button from 'react-bootstrap/esm/Button';
 
 export default function OrdersPage() {
-    const [state, setState] = useContext(MealsContext)
-    const {orders} = state
+    const [globalState, setGlobalState] = useContext(MealsContext)
+    const {orders} = globalState
 
     function clearOrders() {
-        setState({...state, orders: []})
+        setGlobalState({...globalState, orders: []})
     }
 
     return (
