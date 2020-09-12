@@ -13,8 +13,6 @@ export default function HomePage() {
             setState({...state, meals: [...state.meals, ...data]})
         } catch (error) {
             console.log(error)
-        } finally {
-            
         }
     }
     
@@ -22,10 +20,9 @@ export default function HomePage() {
         getMealsFromServer()
     }, [])
     
-    
     return (
     <div className={"row mt-5 justify-content-between"}>{
-        state.meals.map((meal: any) => { return <Meal key={meal.name} actionTitle={'Add to Orders'} {...meal}/>})
+        state.meals.map((meal: any) => { return <Meal key={meal.name} {...meal} actionTitle={'Add to Orders'}/>})
     }</div>
     )
 }
