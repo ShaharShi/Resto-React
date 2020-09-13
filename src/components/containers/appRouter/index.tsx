@@ -6,7 +6,7 @@ import RoutesApp from './routesApp';
 export interface IRoute {
     component: any,
     path: string,
-    name?: string,
+    name?: string | any,
     exact?: boolean,
     isVisible: boolean,
     order: number,
