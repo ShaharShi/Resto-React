@@ -7,7 +7,14 @@ import AppRouter from './components/containers/appRouter';
 
 
 
-const initialState: any = {meals: [], orders: []}
+const initialState: any = {
+  meals: [],
+  orders: [],
+  configApp: {
+    starColor: '',
+    imageSize: ''
+  }
+}
 export const MealsContext: any = React.createContext(null)
 
 function App() {

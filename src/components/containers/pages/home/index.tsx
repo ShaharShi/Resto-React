@@ -21,6 +21,8 @@ export default function HomePage() {
             getMealsFromServer()
         }
     }, [])
+    console.log(globalState);
+    
 
     return (
     <div className={"row mt-5 justify-content-between"}>{
