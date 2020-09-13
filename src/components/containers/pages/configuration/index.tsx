@@ -7,7 +7,6 @@ import FormLabel from 'react-bootstrap/esm/FormLabel';
 import Row from 'react-bootstrap/esm/Row';
 import { StarFill } from 'react-bootstrap-icons';
 import { MealsContext } from 'App';
-import Col from 'react-bootstrap/esm/Col';
 
 export default function ConfigurationPage() {
     const [globalState, setGlobalState] = useContext(MealsContext)

@@ -21,7 +21,7 @@ export default function Meal(props: IMeal) {
     function addMeal() {
         setGlobalState({ ...globalState, orders: [...globalState.orders, props] })
     }
-    console.log(globalState.configApp.imageSize)
+
     return (
         <Card className="col-lg-4 mb-5">
             <Card.Img variant="top" className={'d-block m-auto'} style={{'width': `${globalState.configApp.imageSize}px`}} src={props.image} />

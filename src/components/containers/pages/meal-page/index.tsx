@@ -1,7 +1,5 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import Form from 'react-bootstrap/Form'
-import Dropdown from 'react-bootstrap/Dropdown'
-import Rank from 'components/containers/ui-components/rank';
 import { MealsContext } from 'App';
 import Button from 'react-bootstrap/esm/Button';
 

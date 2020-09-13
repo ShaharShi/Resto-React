@@ -1,8 +1,7 @@
 import React, {useContext, useEffect} from 'react';
-import { MealsContext } from '../../../../App';
 import Axios from 'axios';
 import Meal from 'components/containers/ui-components/meal';
-// import { MealsContext } from 'App';
+import { MealsContext } from 'App';
 
 export default function HomePage() {
     const [globalState, setGlobalState] = useContext(MealsContext)
@@ -21,8 +20,6 @@ export default function HomePage() {
             getMealsFromServer()
         }
     }, [])
-    console.log(globalState);
-    
 
     return (
     <div className={"row mt-5 justify-content-between"}>{
